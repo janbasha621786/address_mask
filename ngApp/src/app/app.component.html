@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Maskmail</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="_authService.loggedIn()" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+
+    </ul>
+    <ul class="navbar-nav">
+      <a class="nav-link"  *ngIf="_authService.loggedIn()" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+      <a class="nav-link"  routerLink="/about" routerLinkActive="active">About Us</a>
+      <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">Sign In</a>
+      <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">Sign Up</a>
+      <a class="nav-link" style="cursor: pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a>
+    </ul>
+    <!--<form class="form-inline my-2 my-lg-0">-->
+      <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+      <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+    <!--</form>-->
+  </div>
+</nav>
+<!-- <div class="container"> -->
+  <router-outlet>
+  </router-outlet>
+<!-- </div> -->
+

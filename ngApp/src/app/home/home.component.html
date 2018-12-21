@@ -1,0 +1,42 @@
+<style>
+  .ameen {
+    position: absolute;
+    width: 100%;
+  }
+
+  .ameen img {
+    width: 100%;
+  }
+ 
+
+  .ameen .btn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .ameen .btn:hover {
+    background-color: black;
+  }
+</style>
+
+<!--<h1 style="padding-top:70px">Coming soon </h1>-->
+<div class="ameen">
+  <div class="container" style="padding-top:20px;text-align: center">
+    <h1>Don't give your address to strangers</h1>
+    <h3>Get unlimited anonymous email addresses to protect your online privacy and to secure your inbox against unwanted emails and identity theft.</h3>
+  </div>
+
+  <img src="../../assets/background-image.jpg" alt="Snow">
+  <button class="btn" *ngIf="!_authService.loggedIn()" (click)="myFun()">Try Maskmail for Free</button>
+</div>

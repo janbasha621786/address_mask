@@ -1,0 +1,23 @@
+<div class="row" pt-5>
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded-0">
+      <!--<div class="card-header">-->
+        <!--<h3 class="mb-0">Register</h3>-->
+      <!--</div>-->
+      <div class="card-body">
+         <form class="form">
+           <div class="form-group">
+             <label for="">Email</label>
+             <input [(ngModel)]='registerUserData.email' name='email' type="text" class="form-control rounded-0" required>
+           </div>
+           <div class="form-group">
+             <label for="">Password</label>
+             <input [(ngModel)]='registerUserData.password' type="password" name='password' class="form-control rounded-0" required>
+           </div>
+           <a href="javascript:void()"(click)="login()">already a member</a>
+           <button (click)="registerUser()" style="background:black" class="btn btn-primary float-right" type="button">Register</button>
+         </form>
+      </div>
+    </div>
+  </div>
+</div>
